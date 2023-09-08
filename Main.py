@@ -2,11 +2,11 @@ import beans
 
 loopig = True
 
-Spitz_black = beans.Dog("Spitz", "Tiny", "10")
-JackRusell_white = beans.Dog("Jack Russell", "Fat", "5")
-Drever_brun = beans.Dog("Drever", "chonk", "12")
-GoldenRetriever_Beige = beans.Dog("Golden Retriever", "Lagom", "1")
-Dachshund_Black = beans.Dog("Dachshund", "Såssgage", "6")
+Spitz_black = beans.Dog("Spitz", "Tiny", 10)
+JackRusell_white = beans.Dog("Jack Russell", "Fat", 5)
+Drever_brun = beans.Dog("Drever", "chonk", 12)
+GoldenRetriever_Beige = beans.Dog("Golden Retriever", "Lagom", 1)
+Dachshund_Black = beans.Dog("Dachshund", "Såssgage", 6)
 
 Doglist = [Spitz_black,JackRusell_white,Drever_brun,GoldenRetriever_Beige,Dachshund_Black]
 
@@ -18,9 +18,8 @@ while loopig:
 
     i = 0
 
-    for Dog in Doglist:
-
-        print(str(i+1) + " : "+ Dog.Ras +" : "+ Dog.Storlek + ", Antal färger: " + str(Dog.Färg) + "st")
+    for beans in Doglist:
+        print(str(i+1) + " : "+ beans.Ras +" : "+ beans.Storlek + ", Antal färger: " + str(beans.Färg) + "st")
         i +=1
 
     dog_nr = input("\nMata in siffra för dog: ")
@@ -31,7 +30,6 @@ while loopig:
 
     if Färg_int > 0:
        print("\nEn " + Doglist[dog_nr_int-1].Ras + " " + Doglist[dog_nr_int-1].Storlek + "kommer här!\n")
-
 
        nytt_dogsaldo_int = Färg_int - 1
        nytt_dogsaldo_string = str(nytt_dogsaldo_int)
